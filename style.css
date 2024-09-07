@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+.print-area {
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Header Section */
+.print-area .header {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px white;
+    cursor: pointer;
+    transition: .5s;
+    filter: grayscale(100%);
+}
+
+.header img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px white;
+}
+
+.header-text {
+    color: beige;
+    width: 60%;
+    margin-left: auto;
+    text-align: center;
+    font-size: small;
+    
+}
+
+.header-text h1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.header-text p {
+    font-size: 20px;
+    color: white;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Left Area Section */
+.left-area {
+    width: 30%;
+    background-color: gray;
+    padding: 20px;
+}
+
+.left-area .contact,
+.left-area .personal-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact h4,
+.personal-info h4 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Skills Section */
+.skills {
+    margin-top: 30px;
+}
+
+.skills h1 {
+    font-size: 30px;
+    font-weight: normal;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bars {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 10px;
+    padding: 20px;
+}
+
+.bars .bar p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bar span {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar span::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+/* Follow Me Section */
+.follow h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+.follow h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.follow p {
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Right Area Section */
+.right-area {
+    width: 70%;
+    padding: 20px;
+    background-color: grey;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    background-color:gray;
+}
+
+fieldset {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: gray;
+}
+
+legend {
+    font-weight:bolder;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: gray;
+    border-radius: 5px solid black;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: black
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    
+}
+
+button:hover {
+    background-color:gray;
+    color: black;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left-area,
+    .right-area {
+        width: 100%;
+    }
+
+    .bars {
+        grid-template-columns: 1fr;
+    }
+}
